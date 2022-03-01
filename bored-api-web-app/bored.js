@@ -34,13 +34,13 @@ function getActivity(type,numParticipants,price,accessibility){
   if (accessibility !== undefined || accessibility != null || accessibility.length !== 0){
     url = url + "&accessibility=" + accessibility;
   }
- console.log(url);
+ //console.log(url);
   //perform ajax call, return results to text fields
   $.ajax({
     type: 'GET',
     url: url,
     success: function (data) {
-      console.log("Success", data);
+      //console.log("Success", data);
       if (data.error !== undefined){
         $errorMsg.html(data.error);
       } 
