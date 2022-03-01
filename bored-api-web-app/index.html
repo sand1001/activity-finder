@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Andrew's Activity Finder</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="styles.css">
+<script src="bored.js"></script>
+</head>
+<body>
+<div class="d-flex justify-content-center">
+    <div class="form-group">
+        <h1>Bored? Try to find a new activity!</h1><br/>
+        <label for="typeSelect">Type of activity:</label>
+        <select class="form-control" name="type" id="typeSelect">
+                <option value="education">Education</option>
+                <option value="recreational">Recreational</option>
+                <option value="social">Social</option>
+                <option value="diy">DIY</option>
+                <option value="charity">Charity</option>
+                <option value="cooking">Cooking</option>
+                <option value="relaxation">Relaxation</option>
+                <option value="music">Music</option>
+                <option value="busywork">Busywork</option>
+            </select><br/>
+            <label for="numParticipants">Number of Participants:</label>
+            <input class="form-control" type="text" name="numParticipants" id="numParticipants" value="1"><br/>
+            <label for="price">Price (Free - Expensive)</label>
+            <input class="form-control" type="range" id="price" name="price" min="0" max="1" value="0.0" step="0.05">
+            <label for="accessibility">Accessibility rating (Most - Least)</label>
+            <input class="form-control" type="range" id="accessibility" name="accessibility" min="0.0" max="1.0" value="0.0" step="0.05">
+            <button class="button" type="submit" id="submit">Give me an activity</button>
+            <button class="button" type="submit" id="reset">Clear Idea</button>
+    </div> 
+</div> 
+<div class="d-flex justify-content-center">
+            <div class="card" id="activity-card">
+                <div class="card-body">
+                    <h3 class="card-title error" id="error">Error</h3>
+                    <h3 class="card-title activity" id="activity">Activity</h3>
+                    <p class="card-text" id="typeText"></p>
+                    <p class="card-text" id="numParticipantsText"></p>
+                    <p class="card-text" id="priceText"></p>
+                    <p class="card-text" id="accessText"></p>
+                    <p class="card-text" id="linkText"></p>
+                </div>
+            </div>
+</div>
+</body>
+</html>
