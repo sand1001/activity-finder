@@ -78,7 +78,7 @@ $card.show();
     getActivity(thisType,numParts,price,accessibility);
   });
 
-  //Click function to bind get activity 
+  //Click function to reset
   $('#reset').click(function() {
     reset();
   });
